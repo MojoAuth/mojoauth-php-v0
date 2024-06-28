@@ -1,0 +1,24 @@
+{
+    "name": "mojoauth/php-sdk",
+    "description": "MojoAuth PHP API Client",
+    "keywords": ["MojoAuth","PasswordLess","EmailOTP", "phpsdk", "auth-api", "auth-library"],
+    "homepage": "https://mojoauth.com",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mojoauth\\": "src/"
+        },
+        "files": ["src/mojoAuthAPI.php"]
+    },
+    "authors": [
+        {
+            "name": "MojoAuth",
+            "email": "connect@mojoauth.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "firebase/php-jwt": "^6.2"
+    }
+}
