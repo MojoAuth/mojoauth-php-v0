@@ -39,7 +39,7 @@ $client = new mojoAuthAPI("MOJOAUTH_APIKEY");// mojoauth apikey replace at "MOJO
 
 ## Documentation
 
-[Getting Started](https://mojoauth.com/docs/) - Everything you need to begin using this SDK.
+[Getting Started](https://docs.mojoauth.com/) - Everything you need to begin using this SDK.
 
 ## How to contribute
 
