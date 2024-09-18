@@ -1,6 +1,8 @@
 <?php
 
 use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+
 
 class mojoAuthAPI
 {
@@ -225,7 +227,13 @@ class mojoAuthAPI
      */
     public function getUserProfileData($access_token, $publicKey)
     {
-        return JWT::decode($access_token, $publicKey, array('RS256'));
+        try {
+            // Use the Key object to specify the key and algorithm
+            return JWT::decode($access_token, new Key($publicKey, 'RS256'));
+        } catch (Exception $e) {
+            // Handle exceptions (e.g., invalid token, expired token)
+            return ['error' => $e->getMessage()];
+        }
     }
     /**
      * build QueryString from Array in request
